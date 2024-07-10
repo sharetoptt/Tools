@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上修圖工具</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 1px solid black;
+            margin-bottom: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .controls input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>線上修圖工具</h1>
+    <input type="file" id="upload" accept="image/*">
+    <canvas id="canvas"></canvas>
+    <div class="controls">
+        <label>曝光: <input type="range" id="exposure" min="-100" max="100" value="0"></label>
+        <label>黑色深度: <input type="range" id="black" min="-100" max="100" value="0"></label>
+        <label>陰影: <input type="range" id="shadows" min="-100" max="100" value="0"></label>
+        <label>對比: <input type="range" id="contrast" min="-100" max="100" value="0"></label>
+        <label>色溫: <input type="range" id="colorTemperature" min="-100" max="100" value="0"></label>
+        <label>飽和度: <input type="range" id="saturation" min="-100" max="100" value="0"></label>
+        <label>銳利度: <input type="range" id="sharpness" min="-100" max="100" value="0"></label>
+        <label>暈影: <input type="range" id="vignette" min="0" max="100" value="0"></label>
+        <button id="reset">重設</button>
+        <button id="save">儲存檔案</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
